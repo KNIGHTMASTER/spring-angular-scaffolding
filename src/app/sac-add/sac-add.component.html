@@ -1,0 +1,32 @@
+<div class="card">
+  <div class="card-body">
+    <form [formGroup]="angForm">
+      <div class="form-group">
+        <label class="col-md-4">Person Name</label>
+        <input type="text" class="form-control" formControlName="personName">
+      </div>
+      <div *ngIf="angForm.controls['personName'].errors?.required && submitted" class="alert alert-danger">
+          Person Name is Required        
+      </div>
+      <div class="form-group">
+        <label class="col-md-4">Business Name</label>
+        <input type="text" class="form-control" formControlName="businessName">
+      </div>
+      <div *ngIf="angForm.controls['businessName'].errors?.required && submitted" class="alert alert-danger">
+          Business Name is Required
+        </div>
+      <div class="form-group">
+        <label class="col-md-4">Business Number</label>
+        <input type="text" class="form-control" formControlName="businessNumber">
+      </div>      
+        <div *ngIf="angForm.controls['businessNumber'].errors?.required && submitted" class="alert alert-danger">
+          Business Number is Required
+        </div>
+      <div class="form-group">
+        <button
+        (click)="simpanData()"
+        class="btn btn-primary">Add Business</button>
+      </div>
+    </form>
+  </div>
+</div>
