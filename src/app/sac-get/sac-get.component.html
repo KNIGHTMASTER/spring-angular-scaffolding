@@ -11,8 +11,8 @@
       <td>{{ business.personalName }}</td>
       <td>{{ business.businessName }}</td>
       <td>{{ business.businessNumber }}</td>
-      <td><a [routerLink]="['/edit', business._id]" class="btn btn-primary" >Edit</a></td>
-      <td><a [routerLink]="" class="btn btn-danger" >Delete</a></td>
+      <td><a [routerLink]="['edit', business.personalName]" class="btn btn-primary" routerLinkActive="active">Edit</a></td>
+      <td><a (click)="deleteBusiness(business.personalName)" class="btn btn-danger" >Delete</a></td>
     </tr>
   </tbody>
 </table>

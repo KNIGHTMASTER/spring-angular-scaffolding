@@ -10,7 +10,7 @@ const routes: Routes = [
     component: SacAddComponent
   },
   {
-    path: 'business/edit:id',
+    path: 'business/edit/:personName',
     component: SacEditComponent
   },
   {
